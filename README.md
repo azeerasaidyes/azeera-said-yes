@@ -1,2 +1,2 @@
 # wedding-invite
-Wedding Invitation Website
+Wedding Invitation Website for Fazreeny & Akmal
