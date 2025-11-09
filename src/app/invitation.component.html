@@ -1,0 +1,159 @@
+<header style="padding-top: 140px;">
+    <span style="font-family: 'Jane Austen'; font-size: 1em;">The Wedding of</span>
+    <p style="font-family: 'DM Serif Text'; margin-top: 0; font-size: 30px;">FAZREENY & AKMAL</p>
+    <img src="../assets/img/locket4.png" style="width: -webkit-fill-available; max-width: 500px; padding-right: 10px;">
+</header>
+<div id="secondSection" style="text-align: center; display: inline-flex; padding: 3.5em 20px;">
+    <div>
+        <img src="../assets/img/tunang.png" style="max-width: 150px;">
+    </div>
+    <div id="right" style="vertical-align: middle; padding-top: 55px">
+        <span style="font-size: 11px; font-family: 'Jane Austen';">We Are Getting Married</span><br>
+        <span style="font-size: 25px; font-family: 'DM Serif Text'">1st January 2026</span><br><br>
+        <span style="font-size: 12px;" id="demo">{{ countdown }}</span>
+    </div>
+</div>
+<div id="invitationSection" style="text-align: center; background-color: #5f242e; padding-top: 1.5em;">
+    <img src="../assets/img/invite.png" style="max-width: 350px; width: auto;">
+</div>
+<div id="locationSection" style="text-align: center; padding: 4em 0em 5em;">
+    <h1 style="font-style: italic; font-size: 1.2em; line-height: 1em; font-family: 'Jane Austen'; margin: 0;">Location</h1>
+    <img src="../assets/img/istac_pink.png" style="max-width: 250px;">
+    <br><br>
+    <span>
+        Dewan ISTAC-IIUM, <br>
+        24, Persiaran Tuanku Syed Sirajuddin, <br>
+        Bukit Tunku, 50480 Kuala Lumpur, <br>
+        Wilayah Persekutuan Kuala Lumpur, Malaysia
+    </span>
+    <br><br>
+    <button><a href="https://maps.app.goo.gl/x5XtVBmNfaETUrqj8" style="text-decoration: none; color: var(--cream)">Get Directions</a></button>
+</div>
+<div id="timelineSection" style="text-align: center; padding: 0em 2em 2em;">
+    <h1 style="font-family: 'Jane Austen'; font-size: 1.2em; margin: 0;">Timeline</h1>
+    <img src="../assets/img/timeline.png" style="width: -webkit-fill-available; max-width: 400px">
+</div>
+<div id="attendanceSection" style="text-align: center; padding: 0em 2em 2em">
+    <p>Kindly confirms & write your wishes for us</p>
+    <div id="attendanceForm" style="min-width: 300px; height: auto; background-color: var(--dusty-purple); margin: 0 auto; max-width: 500px; border-radius: 20px;">
+        <div id="attendanceForm" style="min-width: 250px; max-width: 300px; margin: 0 auto; max-width: 500px; border-radius: 20px; padding: 20px;">
+
+            <form (ngSubmit)="submitRSVP()" #rsvpForm="ngForm">
+
+                <!-- Name Field -->
+                <div style="margin-bottom: 15px;">
+                  <label for="nameInput">Name</label><br>
+                  <input 
+                    id="nameInput"
+                    type="text" 
+                    name="Name" 
+                    [(ngModel)]="rsvp.name" 
+                    placeholder="Your Name" 
+                    required
+                    style="width: 200px; padding: 10px; border-radius: 8px; border: none; background-color: var(--cream); text-align: center;"
+                  >
+                </div>
+              
+                <!-- Attendance Dropdown -->
+                <div style="margin-bottom: 15px;">
+                  <label for="attendanceInput">Attendance</label><br>
+                  <select 
+                    id="attendanceInput"
+                    name="Attendance" 
+                    [(ngModel)]="rsvp.attendance" 
+                    required
+                    style="width: 220px; padding: 10px; border-radius: 8px; border: none; background-color: var(--cream); text-align: center;"
+                  >
+                    <option value="" disabled selected>Will you attend?</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="TBC">TBC</option>
+                  </select>
+                </div>
+              
+                <!-- Message Field -->
+                <div style="margin-bottom: 15px;">
+                  <label for="msgInput">Message</label><br>
+                  <textarea 
+                    id="msgInput"
+                    name="Message" 
+                    [(ngModel)]="rsvp.message" 
+                    placeholder="Write your wishes..." 
+                    rows="3"
+                    style="width: 200px; padding: 10px; border-radius: 8px; border: none; background-color: var(--cream); text-align: center;"
+                  ></textarea>
+                </div>
+              
+                <!-- Submit Button -->
+                <button 
+                  type="submit" 
+                  [disabled]="!rsvpForm.form.valid || isSubmitting"
+                  style="background-color: #5f242e; color: white; font-family: 'Core Bandi Face W01 Regular'; width: 130px; border: none; border-radius: 8px; padding: 10px; cursor: pointer;"
+                >
+                  <ng-container *ngIf="!isSubmitting; else loading">
+                    Submit
+                  </ng-container>
+                  <ng-template #loading>
+                    <span class="spinner"></span> Submitting...
+                  </ng-template>
+                </button>
+              
+              </form>
+              
+              <!-- Success Message -->
+              <div *ngIf="showSuccess" 
+                   style="margin-top: 15px; color: #5f242e; font-weight: bold; animation: fadeIn 0.5s ease-in;">
+                💖 Thank you, {{ lastSubmittedName }}! Your RSVP has been received.
+              </div>            
+    </div>
+</div>
+<div id="giftSection" style="text-align: center; padding: 2em 0em;">
+    <h1 style="margin-bottom: 15px; font-family: 'Jane Austen'; font-size: 1em;">Your presence at our wedding is the greatest gift of all</h1>
+    <!--<h1 _ngcontent-ng-c3455131210="" style="margin-bottom: 15px; font-family: 'Jane Austen'; font-size: 1em;">Fazreeny Azeera binti Ahmad Kamar <br> and <br> Akmal Salihin bin Sha'ari</h1>-->
+    <span style="max-width: 400px; display: block; margin: 0 auto; font-size: 12px;">
+        However, if you wish to honour us with a gift, a monetary gift would be greatly appreciated.
+    </span>
+    <br>
+    <div *ngIf="showCopySuccess" style="color: var(--gold); font-size: 11px; animation: fadeIn 0.5s ease-in;">
+            Account number has been copied!
+    </div>
+    <button (click)="copyBankAccount()" style="width: 250px">164799156762 (copy)</button>
+    <p style="font-size: 12px;">Fazreeny Azeera Ahmad Kamar (Maybank)</p>
+</div>
+<div id="gallerySection" style="text-align: center; display: inline-flex;">
+    <div id="left" style="display: inline-block;">
+        <img src="../assets/img/gallery.png" style="max-width: 150px"> 
+    </div>
+    <div id="right" style="display: inline-block; padding: 40px 0px 0px 25px; text-align: center; vertical-align: middle; font-family: 'Core Bandi Face W01 Regular'">
+        <span style="font-size: 9px;">Dear our beloved family & friends,</span><br><br>
+        <span style="font-size: 1.3em; font-family: 'Jane Austen';">Thank You!</span><br>
+        <span style="font-size: 10px; font-weight: 300;">
+            for being part of our lives and supporting us through our journey. <br><br>
+            We are so blessed to have you celebrate and be a part of our wedding day. <br><br>
+            See you!
+        </span>
+    </div>
+</div>
+<div id="contactSection" style="text-align: center; padding: 2em 0em;">
+    <h1 style="font-size: 13px;">Contact us for any questions or concerns</h1>
+    <div style="max-width: 500px; text-align: center; margin: 0 auto;">
+        <div style="display: inline-block; text-align: center;">
+            <button style="font-size: 12px; background-color: var(--dusty-purple);">
+                <a href="https://wa.me/601119219225" style="text-decoration: none; color: var(--cream)">
+                Fazreensya Ameera<br>
+                Kakak Pengantin <br>
+                +601119219225 
+                </a>
+            </button>
+        </div>
+        <div style="display: inline-block; text-align: center; padding-left: 20px;">
+            <button style="font-size: 12px; background-color: var(--dusty-purple);">
+                <a href="https://wa.me/60193303310" style="text-decoration: none; color: var(--cream)">
+                Fazlinda Noor<br>
+                Kakak Pengantin <br>
+                +60193303310 
+                </a>
+            </button>
+        </div>
+    </div>
+</div>
