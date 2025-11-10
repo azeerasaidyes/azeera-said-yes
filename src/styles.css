@@ -12,10 +12,11 @@ html {
 }
 
 body {
-  margin: 0;
-  background-color: #f8e8d5;
-  color: #6C1A1A;
   width: 100%;
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--burgundy);
+  text-align: center;
 }
 
 .gwendolyn-regular {
@@ -86,96 +87,3 @@ body {
   --dusty-purple: #b69aa3;
 }
 
-body {
-  margin: 0;
-  background-color: var(--cream);
-  color: var(--burgundy);
-  text-align: center;
-}
-
-/* HEADER */
-header {
-  background-color: var(--burgundy);
-  color: var(--cream);
-  padding: 140px 20px 60px;
-  /*background-image: url('your-floral-background.png');*/
-  background-size: cover;
-}
-
-header span {
-  font-family: 'Jane Austen', cursive;
-  font-size: 2em;
-}
-
-header p {
-  font-family: 'DM Serif Text', serif;
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-header img {
-  width: 100%;
-  max-width: 500px;
-}
-
-/* SECTIONS */
-section {
-  padding: 6em 20px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* DIVIDERS */
-.divider {
-  width: 80%;
-  height: 1px;
-  background-color: var(--gold);
-  margin: 3em auto;
-  position: relative;
-}
-.divider::after {
-  content: "✿";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--cream);
-  color: var(--gold);
-  padding: 0 10px;
-}
-
-/* BUTTON */
-button {
-  background-color: var(--sage);
-  color: var(--cream);
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Core Bandi Face W01 Regular', serif;
-  transition: 0.3s ease;
-}
-button:hover {
-  background-color: var(--dusty-purple);
-}
-
-
-/* FOOTER */
-footer {
-  background-color: var(--burgundy);
-  color: var(--cream);
-  padding: 2em;
-  font-family: 'Jane Austen', cursive;
-  font-size: 1.2em;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  header {
-      padding-top: 100px;
-  }
-  section {
-      padding: 3em 1em;
-  }
-}

@@ -1,28 +1,315 @@
-header {
-    text-align: center;
+/* GENERAL */
+h1 {
+  font-family: "Jane Austen";
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .spinner {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 2px solid white;
-    border-top: 2px solid transparent;
-    border-radius: 50%;
-    margin-right: 5px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+a {
+  text-decoration: none;
+  color: var(--cream);
+}
+
+/* HEADER */
+header {
+  background-color: var(--burgundy);
+  color: var(--cream);
+  padding: 140px 20px 60px;
+  text-align: center;
+  background-size: cover;
+}
+
+header {
+  font-family: "Jane Austen", cursive;
+  font-size: 1em;
+}
+
+header p {
+  font-family: "DM Serif Text", serif;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+header img {
+  width: -webkit-fill-available;
+  max-width: 500px;
+  padding-right: 10px;
+}
+
+/* DATE SECTION */
+#dateSection {
+  text-align: center;
+  display: inline-flex;
+  padding: 3.5em 20px;
+
+  img {
+    max-width: 150px;
   }
 
-  select, input, textarea {
-    font-family: 'Core Bandi Face W01 Regular' !important;
+  .right {
+    vertical-align: middle;
+    padding-top: 55px;
   }
+}
+
+/* INVITATION SECTION */
+#invitationSection {
+  text-align: center;
+  background-color: var(--burgundy);
+  padding-top: 1.5em;
+
+  img {
+    max-width: 350px;
+    width: auto;
+  }
+}
+
+/* LOCATION SECTION */
+#locationSection {
+  text-align: center;
+  padding: 4em 0em 5em;
+
+  h1 {
+    font-size: 1.2em;
+    line-height: 1em;
+    margin: 0;
+  }
+
+  img {
+    max-width: 250px;
+  }
+}
+
+/* BUTTON */
+button {
+  background-color: var(--sage);
+  color: var(--cream);
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Core Bandi Face W01 Regular", serif;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--dusty-purple);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--burgundy);
+  color: var(--cream);
+  padding: 2em;
+  font-family: "Jane Austen", cursive;
+  font-size: 1.2em;
+}
+
+/* TIMELINE SECTION */
+#timelineSection {
+  text-align: center;
+  padding: 0em 2em 2em;
+
+  h1 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  img {
+    width: -webkit-fill-available;
+    max-width: 400px;
+  }
+}
+
+/* RSVP SECTION */
+#rsvpSection {
+  text-align: center;
+  padding: 0em 2em 2em;
+
+  h1 {
+    font-size: 1.2em;
+    line-height: 1em;
+    margin: 0;
+    padding-top: 1em;
+  }
+
+  p {
+    margin: 0;
+    padding: 25px 0px 5px;
+  }
+
+  select,
+  input,
+  textarea {
+    font-family: "Core Bandi Face W01 Regular" !important;
+    color: var(--dusty-purple) !important;
+    background-color: var(--cream);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    text-align: center !important;
+    width: 200px;
+  }
+
+  .rsvpForm {
+    height: auto;
+    background-color: var(--dusty-purple);
+    margin: 0 auto;
+    border-radius: 20px;
+    min-width: 250px;
+    max-width: 500px;
+    padding: 20px;
+
+    select {
+      width: 220px;
+    }
+
+    .submitButton {
+      background-color: var(--burgundy);
+      color: white;
+      font-family: "Core Bandi Face W01 Regular";
+      width: 130px;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .successText {
+      margin-top: 15px;
+      color: var(--burgundy);
+      font-weight: bold;
+      animation: fadeIn 0.5s ease-in;
+    }
+  }
+}
+
+/* GIFT SECTION */
+#giftSection {
+  text-align: center;
+  padding: 2em 0em;
+
+  .giftText {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+
+  .copySuccess {
+    color: var(--gold);
+    font-size: 11px;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .bankAcc {
+    width: 250px;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 11px;
+    padding-top: 5px;
+  }
+}
+
+/* GALLERY SECTION */
+#gallerySection {
+  text-align: center;
+  display: inline-flex;
+
+  .left {
+    display: inline-block;
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  .right {
+    display: inline-block;
+    padding: 40px 0px 0px 25px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Core Bandi Face W01 Regular";
+  }
+}
+
+/* CONTACT SECTION */
+#contactSection {
+  text-align: center;
+  padding: 2em 0em;
+  max-width: 500px;
+  margin: 0 auto;
+
+  button {
+    font-size: 10px;
+    padding: 8px 10px;
+    background-color: var(--dusty-purple);
+    width: 130px;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--cream);
+  }
+
+  .left {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .right {
+    display: inline-block;
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  h1 {
+    font-size: 13px;
+    font-family: 'Core Bandi Face W01 Regular';
+    padding-bottom: 8px;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  header {
+    padding-top: 100px;
+  }
+}
+
+/* SUBMITTING FORM SPINNER */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  margin-right: 5px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

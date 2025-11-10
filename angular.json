@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "essentials": {
+    "azeera-said-yes": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/essentials",
+            "outputPath": "dist/azeera-said-yes",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "essentials:build:production"
+              "buildTarget": "azeera-said-yes:build:production"
             },
             "development": {
-              "buildTarget": "essentials:build:development"
+              "buildTarget": "azeera-said-yes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "essentials:build"
+            "buildTarget": "azeera-said-yes:build"
           }
         },
         "test": {
