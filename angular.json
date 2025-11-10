@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "azeera-said-yes": {
+    "wedding-invitation": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/azeera-said-yes",
+            "outputPath": "dist/wedding-invitation",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -28,7 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "baseHref": "/azeera-said-yes/"
+            "baseHref": "/wedding-invitation/"
           },
           "configurations": {
             "production": {
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "azeera-said-yes:build:production"
+              "buildTarget": "wedding-invitation:build:production"
             },
             "development": {
-              "buildTarget": "azeera-said-yes:build:development"
+              "buildTarget": "wedding-invitation:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "azeera-said-yes:build"
+            "buildTarget": "wedding-invitation:build"
           }
         },
         "test": {
