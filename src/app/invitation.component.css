@@ -158,10 +158,10 @@ footer {
     min-width: 250px;
     max-width: 350px;
     padding: 20px;
-    background-image: url("../assets/img/purplebg.png"); /* your transparent PNG */
+    background-image: url("../assets/img/formbg.png"); /* your transparent PNG */
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover; /* or 'cover' if you want it to fill the area */
+    background-size: contain; /* or 'cover' if you want it to fill the area */
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 
