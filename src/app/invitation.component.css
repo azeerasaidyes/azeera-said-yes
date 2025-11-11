@@ -51,6 +51,15 @@ header img {
     margin: 0;
     padding: 10px 0px;
   }
+
+  .wgm {
+    font-size: 19px; 
+    font-family: 'Moontime';
+  }
+
+  .countdown {
+    font-size: 12px;
+  }
 }
 
 /* INVITATION SECTION */
@@ -274,7 +283,7 @@ footer {
 /* CONTACT SECTION */
 #contactSection {
   text-align: center;
-  padding: 3em 0em;
+  padding: 3.5em 0em 3em;
   max-width: 500px;
   margin: 0 auto;
 
@@ -311,6 +320,9 @@ footer {
 
 /* DRESS CODE SECTION */
 #dressCodeSection {
+  text-align: center; 
+  padding: 2em 2em 3em;
+
   img {
     max-width: 250px;
     margin-top: -10px;
@@ -355,11 +367,21 @@ footer {
 
 /* RESPONSIVE */
 @media (min-width: 600px) {
+
+  h1 {
+    font-size: 2.5em;
+  }
   header {
-    padding: 80px 0px 60px;
+    padding: 0px 0px 60px;
+
+    img {
+      max-width: 450px !important;
+    }
   }
 
   #dateSection {
+    padding: 60px 0px;
+
     img {
       max-width: 250px;
       cursor: pointer;
@@ -367,13 +389,25 @@ footer {
     }
 
     .right {
-      padding-top: 120px;
+      padding-top: 80px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .countdown {
+      font-size: 15px;
+    }
+
+    .wgm {
+      font-size: 23px;
     }
   }
 
   #gallerySection {
     .left {
-      padding: 0px 20px 0px 80px;
+      padding: 0px 20px 0px 0px;
 
       img {
         max-width: 210px;
@@ -381,7 +415,7 @@ footer {
     }
 
     .right {
-      padding: 80px 30px 140px 0px;
+      padding: 80px 0px 140px;
       width: 300px;
 
       .dear {
@@ -398,6 +432,12 @@ footer {
 
   .rsvpForm {
     background-size: cover;
+  }
+
+  #invitationSection {
+    img {
+      max-width: 450px;
+    }
   }
 }
 
