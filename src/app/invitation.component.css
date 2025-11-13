@@ -1,6 +1,7 @@
 /* GENERAL */
 h1 {
   font-family: "Moontime";
+  font-size: 2.8em;
 }
 
 a {
@@ -122,6 +123,7 @@ footer {
 
   h1 {
     margin: 0;
+    padding-bottom: 20px;
   }
 
   img {
@@ -138,8 +140,7 @@ footer {
   h1 {
     line-height: 1em;
     margin: 0;
-    padding-top: 1em;
-    font-size: 2.2em;
+    padding-top: 0.8em;
   }
 
   p {
@@ -160,6 +161,10 @@ footer {
     text-align: center !important;
     width: 200px;
     font-size: 1em;
+  }
+
+  label {
+    font-size: 1.1em;
   }
 
   .rsvpForm {
@@ -224,7 +229,8 @@ footer {
   }
 
   .bankAcc {
-    width: 200px;
+    width: 230px;
+    font-size: 18px;
 
     img {
       width: 15px;
@@ -238,7 +244,7 @@ footer {
   }
 
   p {
-    font-size: 12px;
+    font-size: 13px;
     padding-top: 5px;
     margin: 0;
   }
