@@ -211,12 +211,12 @@ footer {
     max-width: 400px;
     display: block;
     margin: 0 auto;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .copySuccess {
     color: var(--gold);
-    font-size: 11px;
+    font-size: 13px;
     animation: fadeIn 0.5s ease-in;
   }
 
@@ -231,10 +231,11 @@ footer {
 
   h1 {
     margin-bottom: 15px;
+    font-size: 2.2em;
   }
 
   p {
-    font-size: 11px;
+    font-size: 12px;
     padding-top: 5px;
     margin: 0;
   }
@@ -264,17 +265,17 @@ footer {
     font-family: "Core Bandi Face W01 Regular";
 
     .dear {
-      font-size: 9px;
+      font-size: 10px;
     }
 
     .thanks {
-      font-size: 2.2em;
+      font-size: 2.3em;
       line-height: 2em;
       font-family: "Moontime";
     }
 
     .wish {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 300;
     }
   }
